@@ -60,28 +60,66 @@ A **steganography** project using **Streamlit** and **Tkinter** for GUI, enablin
 
 ---
 
-## **🚀 Usage**  
+### 🔥 Command Line Interface (CLI) Usage
 
-### **Streamlit GUI**  
-Run the **Streamlit app**:  
+You can use the CLI to **encrypt** and **decrypt** messages hidden inside images.
+
+#### ✅ **Encrypt a Message into an Image**
+To **hide a message** inside an image, use:
+
+```sh
+python encrypt.py <password> "<message>" <input_image_path> <output_image_path>
 ```
+
+**Example:**
+```sh
+python encrypt.py mysecret "Hello, World!" input.png output.png
+```
+This encrypts `"Hello, World!"` using `"mysecret"` and stores it in `output.png`.
+
+---
+
+#### 🔓 **Decrypt a Message from an Image**
+To **retrieve the hidden message**, use:
+
+```sh
+python decrypt.py <password> <input_image_path>
+```
+
+**Example:**
+```sh
+python decrypt.py mysecret output.png
+```
+This extracts the **hidden message** from `output.png` using `"mysecret"`.
+
+---
+
+### 🚀 **GUI Usage**
+
+#### 🎨 **Streamlit Interface**
+Run the **Streamlit** app for a **web-based** UI:
+```sh
 streamlit run GUI_Streamlit.py
 ```
-- Open browser → **Use the interface to encrypt & decrypt messages.**
+Open your **browser** and use the interface to **encrypt & decrypt messages** easily.
 
-### **Tkinter GUI**  
-Run the **Tkinter app**:  
-```
+#### 🖥️ **Tkinter Interface**
+Run the **Tkinter** app for a **desktop-based** UI:
+```sh
 python GUI_Tkinter.py
 ```
-- A window will open → **Use buttons to encrypt & decrypt messages.**
+A window will open with **buttons** to **encrypt & decrypt** messages.
 
-### **Test Encryption & Decryption**  
-Run test scripts:  
-```
+---
+
+### 🛠️ **Testing**
+Run test scripts to validate encryption and decryption:
+```sh
 python test_encrypt.py
 python test_decrypt.py
 ```
+
+This ensures that the **message encryption and decryption** work correctly. 🚀
 
 ---
 
